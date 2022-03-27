@@ -1,4 +1,10 @@
+import { useState, useEffect } from "react";
+
 const Formulario = () =>{
+    const [nombre,setNombre] = useState('');
+
+    console.log('Cantilever');
+
     return(
         <div className="md:w-1/2 lg:w-3/3">
             <h3 className="font-black text-3xl text-center">Seguimiento pacientes</h3>
@@ -14,6 +20,8 @@ const Formulario = () =>{
                         type="text"
                         placeholder="Nombre de tu mascota"
                         className="border-2 w-full p-2 mt-2 placeholder-indigo-700 rounded-md"
+                        value={nombre}
+                        onChange={ (e) => setNombre(e.target.value) }
                     />
                 </div>
                 <div className="mb-5">
@@ -54,7 +62,7 @@ const Formulario = () =>{
                     type="submit"
                     className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-500
                     cursor-pointer transition-colors"
-                    value="agregarPaciente"
+                    value="Agregar paciente"
                 />                       
             </form>
             
