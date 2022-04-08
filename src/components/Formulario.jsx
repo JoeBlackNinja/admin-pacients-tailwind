@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Error } from "./Error";
+=======
+import Error from "./Error";
+>>>>>>> 6b2a719bc8416ba326c8a005710b2aa8ecf24052
 
 const Formulario = ({pacientes, setPacientes}) =>{
     const [nombre,setNombre] = useState('');
@@ -43,7 +47,13 @@ const Formulario = ({pacientes, setPacientes}) =>{
             <form  className="bg-white shadow-md rounded-lg py-10 px-4"
                     onSubmit={handleSubmit}>
 
+<<<<<<< HEAD
                 {error && <Error>Todos los campos son obligatorios</Error>}
+=======
+                {error && <Error>No se permiten campos vacios</Error> }
+                    
+                
+>>>>>>> 6b2a719bc8416ba326c8a005710b2aa8ecf24052
 
                 <div className="mb-5">
                     <label htmlFor="mascota" className="block text-gray-600 uppercase font-bold">Nombre mascota</label>
