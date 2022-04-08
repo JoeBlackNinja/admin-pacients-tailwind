@@ -8,13 +8,15 @@ function App() {
 
   return (
     <div className="container mx-auto mt-10">
-       <Header
-        numeros={1}
-        isAdmin={false}
-       />
+       <Header/>
        <div className='mt-12 flex'>
-         <Formulario/>
-         <ListadoPacientes/>
+         <Formulario
+          pacientes={pacientes}
+          setPacientes={setPacientes}
+         />
+         <ListadoPacientes
+          pacientes={pacientes}
+         />
        </div>
     </div>      
   );
