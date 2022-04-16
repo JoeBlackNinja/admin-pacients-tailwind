@@ -1,6 +1,16 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
+import { confirmable } from 'react-confirm'
 
-const Paciente = ({paciente, setPaciente}) => {
+const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
+
+  const { nombre, propietario, email, fecha, sintomas, id } = paciente;
+
+  const handleEliminar = () => {
+    let respuesta = window.confirm( "Deseas eliminar al paciente ${id}");
+    if(respuesta){
+      eliminarPaciente(id)
+    }      
+  }
 
   // useEffect( () => {
   //   console.log('CAntilever');
@@ -36,6 +46,7 @@ const Paciente = ({paciente, setPaciente}) => {
             className="py-2 px-10 bg-red-600 
             hover:bg-red-700 text-white
             font-bold upercase rounded-lg"            
+            onClick={handleEliminar}
             >Eliminar</button>
         </div>
       </div>

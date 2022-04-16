@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const Error = ({children}) => {
     return (
         <div
@@ -8,7 +7,7 @@ export const Error = ({children}) => {
         </div>
     )
 }
-=======
+
 const Error = ({children}) => {
   return (
     <div className="bg-red-600 text-white text-center p-3 
@@ -19,4 +18,3 @@ const Error = ({children}) => {
 }
 
 export default Error;
->>>>>>> 6b2a719bc8416ba326c8a005710b2aa8ecf24052
